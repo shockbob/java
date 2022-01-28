@@ -10,8 +10,8 @@ import java.util.stream.Collectors;
 @Data
 @AllArgsConstructor
 public class PokerHand {
-    private  String handAsString;
-    private  List<Card> cards;
+    private String handAsString;
+    private List<Card> cards;
 
     public static PokerHand createPokerHand(String hand) {
         List<Card> cards = Arrays.stream(hand.split(",")).

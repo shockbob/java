@@ -9,8 +9,8 @@ import java.util.regex.Pattern;
 @Data
 @AllArgsConstructor
 public class Card {
-    private  String suit;
-    private  int rank;
+    private String suit;
+    private int rank;
 
     public static Card build(String card) {
         Pattern p = Pattern.compile("([0-9JQKA]*)([SHCD])");
