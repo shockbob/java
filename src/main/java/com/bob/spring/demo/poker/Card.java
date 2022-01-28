@@ -3,13 +3,21 @@ package com.bob.spring.demo.poker;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
-class Card {
-    String suit;
-    int rank;
+public class Card {
+    private final String suit;
+    private final int rank;
 
     public Card(String suit, int rank) {
         this.suit = suit;
         this.rank = rank;
+    }
+
+    public String getSuit() {
+        return suit;
+    }
+
+    public int getRank() {
+        return rank;
     }
 
     public static Card build(String card) {

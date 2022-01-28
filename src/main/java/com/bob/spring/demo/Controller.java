@@ -10,10 +10,6 @@ import org.springframework.web.bind.annotation.RestController;
 
 @RestController
 public class Controller {
-    @GetMapping(path = "/test")
-    public String mapping() {
-        return "boo";
-    }
 
     @GetMapping(path = "/compare")
     public String compare(@RequestParam String hand1, @RequestParam String hand2) {

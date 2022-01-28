@@ -9,7 +9,7 @@ public class Poker {
     public static Map<Integer, List<Card>> getMapByRank(PokerHand hand) {
         return hand.getCards().
                 stream().
-                collect(Collectors.groupingBy(card -> card.rank));
+                collect(Collectors.groupingBy(Card::getRank));
     }
 }
 

@@ -1,5 +1,7 @@
 package com.bob.spring.demo.poker;
 
+import com.bob.spring.demo.poker.recognizer.*;
+
 import java.util.Arrays;
 
 public class PokerHandEvaluator {
@@ -27,9 +29,9 @@ public class PokerHandEvaluator {
 
     private static int getHandValue(PokerHand hand) {
         return Arrays.stream(recognizerWithValues).
-                filter(v -> v.recognizer.matches(hand)).
+                filter(v -> v.getRecognizer().matches(hand)).
                 findFirst().
-                map(m -> m.handValue).
+                map(RecognizerWithValue::getHandValue).
                 orElse(0);
     }
 
